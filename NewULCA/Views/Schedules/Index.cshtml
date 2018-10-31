@@ -3,6 +3,20 @@
 @{
     ViewBag.Title = "Index";
 }
+<link href="~/Content/bootstrap-reboot.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/main.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-1">ULCA </h1>
+        <p class="lead"> Our Categories.</p>
+    </div>
+</div>
 
 <h2>Index</h2>
 
@@ -35,35 +49,36 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Image)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.AirDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StarTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EndTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LengthTimeSpan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ShowId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Channels.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ScheduledId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ScheduledId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ScheduledId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Image)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AirDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StarTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LengthTimeSpan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ShowId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Channels.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ScheduledId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ScheduledId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ScheduledId })
+            </td>
+        </tr>
+    }
 
 </table>

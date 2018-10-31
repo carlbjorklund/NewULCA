@@ -4,13 +4,28 @@
     ViewBag.Title = "Create";
 }
 
+<link href="~/Content/bootstrap-reboot.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/main.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-1">ULCA </h1>
+        <p class="lead"> Our Categories.</p>
+    </div>
+</div>
+
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Schedules</h4>
         <hr />
