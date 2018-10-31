@@ -1,0 +1,74 @@
+﻿@model NewULCA.Schedules
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Schedules</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AirDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AirDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StarTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StarTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LengthTimeSpan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LengthTimeSpan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ShowId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShowId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Channels.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Channels.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ScheduledId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
