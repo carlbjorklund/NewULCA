@@ -44,7 +44,7 @@
                         <h5 class="mt-0 mb-1"> > @Html.DisplayFor(modelItem => item.Title)<</h5>
                         <p> Description: @Html.DisplayFor(modelItem => item.Description) </p>
                         <p> Category: @Html.DisplayFor(modelItem => item.Categories.Name)</p>
-                        Length: @Html.DisplayFor(modelItem => item.Length) Minutes
+                        Length: @Html.DisplayFor(modelItem => item.Length) Minutes <br/>
                         @Html.ActionLink("Edit", "Edit", new { id = item.SchowId }) |
                         @Html.ActionLink("Details", "Details", new { id = item.SchowId }) |
                         @Html.ActionLink("Delete", "Delete", new { id = item.SchowId })
