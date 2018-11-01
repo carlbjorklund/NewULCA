@@ -28,7 +28,7 @@ namespace NewULCA
         public System.DateTime EndTime { get; set; }
         public System.TimeSpan LengthTimeSpan { get; set; }
         public int ShowId { get; set; }
-    
+        public int Sorting { get; set; }
         public virtual Channels Channels { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Shows> Shows { get; set; }

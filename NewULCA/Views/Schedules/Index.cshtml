@@ -43,7 +43,10 @@
         <th>
             @Html.DisplayNameFor(model => model.ShowId)
         </th>
-        
+        <th>
+            @Html.DisplayNameFor(model => model.Sorting)
+        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.Channels.Name)
         </th>
@@ -70,6 +73,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ShowId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sorting)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Channels.Name)

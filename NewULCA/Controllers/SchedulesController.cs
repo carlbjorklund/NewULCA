@@ -48,7 +48,7 @@ namespace NewULCA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ScheduledId,Image,ChannelId,AirDate,StarTime,EndTime,LengthTimeSpan,ShowId")] Schedules schedules)
+        public ActionResult Create([Bind(Include = "ScheduledId,Image,ChannelId,AirDate,StarTime,EndTime,LengthTimeSpan,ShowId,Sorting")] Schedules schedules)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace NewULCA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ScheduledId,Image,ChannelId,AirDate,StarTime,EndTime,LengthTimeSpan,ShowId")] Schedules schedules)
+        public ActionResult Edit([Bind(Include = "ScheduledId,Image,ChannelId,AirDate,StarTime,EndTime,LengthTimeSpan,ShowId,Sorting")] Schedules schedules)
         {
             if (ModelState.IsValid)
             {
