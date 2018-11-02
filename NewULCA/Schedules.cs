@@ -6,7 +6,6 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System.ComponentModel.DataAnnotations;
 
 namespace NewULCA
 {
@@ -24,13 +23,12 @@ namespace NewULCA
         public int ScheduledId { get; set; }
         public string Image { get; set; }
         public int ChannelId { get; set; }
-        [DisplayFormat(DataFormatString = "{yyyy MMM 0:dd }")]
         public System.DateTime AirDate { get; set; }
-        public System.DateTime StartTime { get; set; }
-        public System.DateTime EndTime { get; set; }
+        public System.TimeSpan StartTime { get; set; }
+        public System.TimeSpan EndTime { get; set; }
         public System.TimeSpan LengthTimeSpan { get; set; }
         public int ShowId { get; set; }
-        public int Sorting { get; set; }
+    
         public virtual Channels Channels { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Shows> Shows { get; set; }

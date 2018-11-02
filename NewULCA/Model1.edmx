@@ -40,7 +40,7 @@
           <Property Name="ChannelId" Type="int" Nullable="false" />
           <Property Name="AirDate" Type="datetime2" Precision="7" Nullable="false" />
           <Property Name="StarTime" Type="datetime2" Precision="7" Nullable="false" />
-          <Property Name="EndTime" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="EndTime" Type="datetime2" Precision="7" Nullable="false" StoreGeneratedPattern="Computed" />
           <Property Name="LengthTimeSpan" Type="time" Precision="7" Nullable="false" />
           <Property Name="ShowId" Type="int" Nullable="false" />
         </EntityType>
@@ -156,8 +156,8 @@
           <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ChannelId" Type="Int32" Nullable="false" />
           <Property Name="AirDate" Type="DateTime" Nullable="false" Precision="7" />
-          <Property Name="StarTime" Type="DateTime" Nullable="false" Precision="7" />
-          <Property Name="EndTime" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="StartTime" Type="Time" Nullable="false" />
+          <Property Name="EndTime" Type="Time" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
           <Property Name="LengthTimeSpan" Type="Time" Nullable="false" Precision="7" />
           <Property Name="ShowId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Channels" Relationship="Self.FK_Schedules_Channels_ChannelId" FromRole="Schedules" ToRole="Channels" />
@@ -278,7 +278,7 @@
                 <ScalarProperty Name="Image" ColumnName="Image" />
                 <ScalarProperty Name="ChannelId" ColumnName="ChannelId" />
                 <ScalarProperty Name="AirDate" ColumnName="AirDate" />
-                <ScalarProperty Name="StarTime" ColumnName="StarTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StarTime" />
                 <ScalarProperty Name="EndTime" ColumnName="EndTime" />
                 <ScalarProperty Name="LengthTimeSpan" ColumnName="LengthTimeSpan" />
                 <ScalarProperty Name="ShowId" ColumnName="ShowId" />
