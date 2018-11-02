@@ -24,13 +24,24 @@ namespace NewULCA
         public int ScheduledId { get; set; }
         public string Image { get; set; }
         public int ChannelId { get; set; }
-      
+        [Display(Name = "Air Date")]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public System.DateTime AirDate { get; set; }
+
+        [Display(Name = "Start time")]
+        [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
         public System.TimeSpan StartTime { get; set; }
+
+        [Display(Name = "End Time")]
+        [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
         public System.TimeSpan EndTime { get; set; }
+
+        [Display(Name = "Len")]
         public System.TimeSpan LengthTimeSpan { get; set; }
         public int ShowId { get; set; }
     
+        public string Title { get; set; }
+        public string Category { get set; }
         public virtual Channels Channels { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Shows> Shows { get; set; }
