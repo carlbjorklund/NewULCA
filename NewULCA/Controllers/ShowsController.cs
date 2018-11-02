@@ -12,7 +12,7 @@ namespace NewULCA.Controllers
 {
     public class ShowsController : Controller
     {
-        private Entities db = new Entities();
+        private Entities1 db = new Entities1();
 
         // GET: Shows
         public ActionResult Index()

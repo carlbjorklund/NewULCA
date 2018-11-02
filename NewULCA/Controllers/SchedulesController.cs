@@ -12,7 +12,7 @@ namespace NewULCA.Controllers
 {
     public class SchedulesController : Controller
     {
-        private Entities db = new Entities();
+        private Entities1 db = new Entities1();
 
         // GET: Schedules
         public ActionResult Index()
