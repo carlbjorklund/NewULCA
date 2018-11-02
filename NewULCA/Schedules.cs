@@ -26,7 +26,7 @@ namespace NewULCA
         public int ChannelId { get; set; }
         [DisplayFormat(DataFormatString = "{yyyy MMM 0:dd }")]
         public System.DateTime AirDate { get; set; }
-        public System.DateTime StarTime { get; set; }
+        public System.DateTime StartTime { get; set; }
         public System.DateTime EndTime { get; set; }
         public System.TimeSpan LengthTimeSpan { get; set; }
         public int ShowId { get; set; }
