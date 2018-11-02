@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
+<a href="~/Views/Categories/Index.cshtml">~/Views/Categories/Index.cshtml</a>
 <link href="~/Content/bootstrap-reboot.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 <link href="~/Content/main.css" rel="stylesheet" />
@@ -10,15 +11,15 @@
 <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
 <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
 <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+<link href="~/Content/main.css" rel="stylesheet" />
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-1">ULCA </h1>
-        <p class="lead"> Our Schedules.</p>
+        <p class="lead"> Schedules.</p>
     </div>
 </div>
 
-<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -43,7 +44,11 @@
         <th>
             @Html.DisplayNameFor(model => model.ShowId)
         </th>
-      
+
+        <th>
+            @Html.DisplayNameFor(model => model.TitleShows.Title)
+        </th>
+
         <th>
             @Html.DisplayNameFor(model => model.Channels.Name)
         </th>
@@ -71,7 +76,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.ShowId)
             </td>
-           
+            <td>
+                @Html.DisplayFor(modelItem => item.TitleShows.Categories.Name)
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Channels.Name)
             </td>

@@ -36,12 +36,11 @@ namespace NewULCA
         [DisplayFormat(DataFormatString = "{0:hh\\:mm}", ApplyFormatInEditMode = true)]
         public System.TimeSpan EndTime { get; set; }
 
-        [Display(Name = "Len")]
+        [Display(Name = "Length")]
         public System.TimeSpan LengthTimeSpan { get; set; }
         public int ShowId { get; set; }
-    
-        public string Title { get; set; }
-        public string Category { get set; }
+        public virtual Shows TitleShows { get; set; }
+        public string Category { get; set; }
         public virtual Channels Channels { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Shows> Shows { get; set; }

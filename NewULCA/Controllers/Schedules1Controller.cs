@@ -10,21 +10,21 @@ using NewULCA;
 
 namespace NewULCA.Controllers
 {
-    public class SchedulesController : Controller
+    public class Schedules1Controller : Controller
     {
         private Entities1 db = new Entities1();
 
-        // GET: Schedules
+        // GET: Schedules1
         public ActionResult Index()
         {
             var schedules = db.Schedules.Include(s => s.Channels)
-                .Include(s=>s.Shows)
-                .Include(s=>s.Category)
-                .OrderBy(s=>s.TitleShows);
-            return View(schedules);
+                .Include(s => s.Shows.Select(i => i.Categories))
+                .OrderBy(i => i.Channels.Name);
+
+            return View(schedules.ToList());
         }
 
-        // GET: Schedules/Details/5
+        // GET: Schedules1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -39,14 +39,14 @@ namespace NewULCA.Controllers
             return View(schedules);
         }
 
-        // GET: Schedules/Create
+        // GET: Schedules1/Create
         public ActionResult Create()
         {
             ViewBag.ChannelId = new SelectList(db.Channels, "Id", "Name");
             return View();
         }
 
-        // POST: Schedules/Create
+        // POST: Schedules1/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -64,7 +64,7 @@ namespace NewULCA.Controllers
             return View(schedules);
         }
 
-        // GET: Schedules/Edit/5
+        // GET: Schedules1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -80,7 +80,7 @@ namespace NewULCA.Controllers
             return View(schedules);
         }
 
-        // POST: Schedules/Edit/5
+        // POST: Schedules1/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -97,7 +97,7 @@ namespace NewULCA.Controllers
             return View(schedules);
         }
 
-        // GET: Schedules/Delete/5
+        // GET: Schedules1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,7 +112,7 @@ namespace NewULCA.Controllers
             return View(schedules);
         }
 
-        // POST: Schedules/Delete/5
+        // POST: Schedules1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

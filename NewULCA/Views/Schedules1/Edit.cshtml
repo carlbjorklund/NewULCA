@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Edit";
 }
-
+<a href="~/Views/Categories/Index.cshtml">~/Views/Categories/Index.cshtml</a>
 <link href="~/Content/bootstrap-reboot.css" rel="stylesheet" />
 <link href="~/Content/bootstrap.css" rel="stylesheet" />
 <link href="~/Content/main.css" rel="stylesheet" />
@@ -11,14 +11,14 @@
 <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
 <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
 <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+<link href="~/Content/main.css" rel="stylesheet" />
 
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
         <h1 class="display-1">ULCA </h1>
-        <p class="lead"> Schedule Edit.</p>
+        <p class="lead"> Schedules.</p>
     </div>
 </div>
-<h2>Edit</h2>
 
 
 @using (Html.BeginForm())
@@ -59,15 +59,15 @@
             @Html.LabelFor(model => model.StartTime, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.StartTime, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger", @placerholder = "11:00" })
+                @Html.ValidationMessageFor(model => model.StartTime, "", new { @class = "text-danger" })
             </div>
         </div>
 
-        <div class="form-group" placeholder = "11:00">
+        <div class="form-group">
             @Html.LabelFor(model => model.EndTime, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.EndTime, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EndTime, "", new { @class = "text-danger", @placerholder="11:00" })
+                @Html.ValidationMessageFor(model => model.EndTime, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -86,8 +86,6 @@
                 @Html.ValidationMessageFor(model => model.ShowId, "", new { @class = "text-danger" })
             </div>
         </div>
-        
-    
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
