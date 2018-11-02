@@ -11,7 +11,8 @@ namespace NewULCA
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Schedules
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,6 +24,7 @@ namespace NewULCA
         public int ScheduledId { get; set; }
         public string Image { get; set; }
         public int ChannelId { get; set; }
+      
         public System.DateTime AirDate { get; set; }
         public System.TimeSpan StartTime { get; set; }
         public System.TimeSpan EndTime { get; set; }
